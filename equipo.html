@@ -1,190 +1,197 @@
-<!DOCTYPE html>  
-<html lang="es">  
-<head>  
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>🚑 Equipo Médico</title>  
-    <link rel="stylesheet" href="css/styles.css" />  
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">  
-</head>  
-<body>  
-  <header>  
-    <!-- Menú Bootstrap -->  
-    <nav class="navbar navbar-expand-lg navbar-light bg-secondary">  
-      <a class="navbar-brand" href="index.html">  
-          <img src="images/medical-center.png" alt="Logotipo del Hospital" style="height: 40px;">  
-      </a>  
+<!DOCTYPE html>
+<html lang="es">
 
-      <!-- Botón reservar cita -->  
-      <div class="d-flex order-lg-2">  
-          <a class="btn btn-primary ms-2" href="#" role="button">Reservar Cita</a>  
-      </div>  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🚑 Equipo Médico</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
 
-      <button class="navbar-toggler order-lg-1" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">  
-          <span class="navbar-toggler-icon"></span>  
-      </button>  
-       
-      <div class="collapse navbar-collapse order-lg-1" id="navbarNav">  
-          <ul class="navbar-nav me-auto">  
-              <li class="nav-item">  
-                  <a class="nav-link text-white" href="equipo.html">Equipo Médico</a>  
-              </li>  
-              <li class="nav-item">  
-                  <a class="nav-link text-white" href="contacto.html">Contacto</a>  
-              </li>  
-          </ul>  
-      </div>  
-    </nav>  
-  </header>  
+<body>
+  <header>
+    <!-- Menú Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/medical-center.png" alt="Logotipo del Hospital" style="height: 40px;">
+      </a>
 
- 
-  <section id="team" class="section-team py-2 text-center">  
-      <h1>Equipo Médico</h1>  <br>
-      <p>En Medical Center, contamos con profesionales altamente calificados y comprometidos. Nuestro equipo trabaja día a día para brindar la mejor atención a nuestros pacientes.</p>  
-  </section>  
+      <!-- Botón reservar cita -->
+      <div class="d-flex order-lg-2">
+        <a class="btn btn-primary ms-2" href="#" role="button">Reservar Cita</a>
+      </div>
 
- <!-- Botones para clonar, fusionar (en consola) y mostrar -->  
+      <button class="navbar-toggler order-lg-1" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse order-lg-1" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="equipo.html">Equipo Médico</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="contacto.html">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+
+  <section id="team" class="section-team py-2 text-center">
+    <h1>Equipo Médico</h1> <br>
+    <p>En Medical Center, contamos con profesionales altamente calificados y comprometidos. Nuestro equipo trabaja día a
+      día para brindar la mejor atención a nuestros pacientes.</p>
+  </section>
+
+  <!-- Botones para clonar, fusionar (en consola) y mostrar -->
   <div class="text-center my-4">
-  <button onclick="clonarDoctor()" type="button" class="btn btn-outline-secondary">Clonar Doctor</button>  
-  <button onclick="fusionarDatos()" type="button" class="btn btn-outline-secondary">Fusionar Datos</button>  
-  <button onclick="recorrerYMostrar()" type="button" class="btn btn-outline-secondary">Recorrer y Mostrar</button>  
-</div>  
-    <!-- Botones para agregar o eliminar dres -->  
-    <div class="text-center my-4">  
-      <button onclick="agregarDoctorManual()" type="button" class="btn btn-info">Agregar Doctor</button>  
-      <button onclick="eliminarDoctor('Dr. Pedro Gómez')" type="button" class="btn btn-info">Eliminar Doctor</button>  
-      <button onclick="buscarDoctor('Dr. Carlos Andrés Ruiz')" type="button" class="btn btn-info">Buscar Doctor</button>  
-    </div> 
+    <button onclick="clonarDoctor()" type="button" class="btn btn-outline-secondary">Clonar Doctor</button>
+    <button onclick="fusionarDatos()" type="button" class="btn btn-outline-secondary">Fusionar Datos</button>
+    <button onclick="recorrerYMostrar()" type="button" class="btn btn-outline-secondary">Recorrer y Mostrar</button>
+  </div>
+  <!-- Botones para agregar o eliminar dres -->
+  <div class="text-center my-4">
+    <button onclick="agregarDoctorManual()" type="button" class="btn btn-info">Agregar Doctor</button>
+    <button onclick="eliminarDoctor('Dr. Pedro Gómez')" type="button" class="btn btn-info">Eliminar Doctor</button>
+    <button onclick="buscarDoctor('Dr. Carlos Andrés Ruiz')" type="button" class="btn btn-info">Buscar Doctor</button>
+  </div>
 
-  <!-- Botones para filtrar médicos -->  
-  <div class="text-center my-4">  
-    <button id="filter-button" class="btn btn-success mb-4">Mostrar médicos con + de 5 años de experiencia</button>  
-    <button id="reset-button" class="btn btn-warning mb-4">Mostrar todos los médicos</button>  
-  </div>  
+  <!-- Botones para filtrar médicos -->
+  <div class="text-center my-4">
+    <button id="filter-button" class="btn btn-success mb-4">Mostrar médicos con + de 5 años de experiencia</button>
+    <button id="reset-button" class="btn btn-warning mb-4">Mostrar todos los médicos</button>
+  </div>
 
-  <!-- Lista del Equipo Médico -->  
-  <section class="team-grid container" id="team-grid">  
-      <!-- Aquí se agregarán dinámicamente los doctores -->  
-  </section>  
+  <!-- Lista del Equipo Médico -->
+  <section class="team-grid container" id="team-grid">
+    <!-- Aquí se agregarán dinámicamente los doctores -->
+  </section>
 
-  <!-- Modal para mostrar detalles del médico -->  
-  <div class="modal fade" id="doctorModal" tabindex="-1" role="dialog" aria-labelledby="doctorModalLabel" aria-hidden="true">  
-    <div class="modal-dialog modal-sm" role="document">  
-      <div class="modal-content">  
-        <div class="modal-header">  
-          <h6 class="modal-title" id="doctorModalLabel">Detalles del Médico</h6>  
-          <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">  
-            <span aria-hidden="true">&times;</span>  
-          </button>  
-        </div>  
-        <div class="modal-body" id="doctorModalContent">  
-        
-        </div>  
-        <div class="modal-footer">  
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar ventana</button>  
-        </div>  
-      </div>  
-    </div>  
-  </div>  
+  <!-- Modal para mostrar detalles del médico -->
+  <div class="modal fade" id="doctorModal" tabindex="-1" role="dialog" aria-labelledby="doctorModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6 class="modal-title" id="doctorModalLabel">Detalles del Médico</h6>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="doctorModalContent">
 
-<!-- FOOTER -->  
-<footer class="bg-dark text-white py-3">  
-    <div class="container">  
-      <div class="row align-items-center">  
-        <div class="col-md-2 text-center mb-4 mb-md-0">  
-          <img src="images/logo_footer.webp" alt="Logo Medical Center" class="img-fluid footer-logo">  
-        </div>  
-        <div class="col-md-3">  
-          <nav>  
-            <ul class="list-unstyled">  
-              <li><a href="equipo.html" class="text-white">Equipo Médico</a></li>  
-              <li><a href="contacto.html" class="text-white">Contacto</a></li>  
-              <li><a href="index.html" class="text-white">Servicios</a></li>  
-            </ul>  
-          </nav>  
-        </div>  
-        <div class="col-md-3">  
-          <div class="address">  
-            <p>Dirección:<br>  
-               Calle Falsa 123<br>   
-               Fono: +562 12345678</p>  
-          </div>  
-        </div>  
-        <div class="col-md-4 text-center">  
-          <div class="social">  
-            <ul class="list-inline">  
-              <li class="list-inline-item"><a href="https://facebook.com/" target="_blank" class="text-white">Facebook</a></li>  
-              <li class="list-inline-item"><a href="https://twitter.com/" target="_blank" class="text-white">X</a></li>  
-              <li class="list-inline-item"><a href="https://instagram.com/" target="_blank" class="text-white">Instagram</a></li>  
-            </ul>  
-          </div>  
-        </div>  
-      </div>  
-    </div>  
-  </footer>  
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar ventana</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <!-- Scripts de Bootstrap -->  
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>  
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>  
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white py-3">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-2 text-center mb-4 mb-md-0">
+          <img src="images/logo_footer.webp" alt="Logo Medical Center" class="img-fluid footer-logo">
+        </div>
+        <div class="col-md-3">
+          <nav>
+            <ul class="list-unstyled">
+              <li><a href="equipo.html" class="text-white">Equipo Médico</a></li>
+              <li><a href="contacto.html" class="text-white">Contacto</a></li>
+              <li><a href="index.html" class="text-white">Servicios</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-md-3">
+          <div class="address">
+            <p>Dirección:<br>
+              Calle Falsa 123<br>
+              Fono: +562 12345678</p>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <div class="social">
+            <ul class="list-inline">
+              <li class="list-inline-item"><a href="https://facebook.com/" target="_blank"
+                  class="text-white">Facebook</a></li>
+              <li class="list-inline-item"><a href="https://twitter.com/" target="_blank" class="text-white">X</a></li>
+              <li class="list-inline-item"><a href="https://instagram.com/" target="_blank"
+                  class="text-white">Instagram</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-  <!-- Script para manejar el equipo médico -->  
-  <script>  
+  <!-- Scripts de Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <!-- Script para manejar el equipo médico -->
+  <script>
     // JSON del equipo médico  
-    let equipoMedico = [  
-        {  
-            nombre: "Dr. Patricio Martínez",  
-            especialidad: "Cardiología",  
-            experiencia: 4,  
-            disponibilidad: "Martes, jueves y viernes",  
-            contacto: { telefono: "+56 9 12345678", email: "juan.martinez@hospital.com" },  
-            horarios: { lunes: "10:00 - 14:00", miercoles: "10:00 - 14:00", viernes: "14:00 - 18:00" },  
-            imagen: "images/doc1.jpg",  
-        },  
-        {  
-            nombre: "Dra. Matilde Silva",  
-            especialidad: "Pediatría",  
-            experiencia: 3,  
-            disponibilidad: "Martes, jueves y sábado",  
-            contacto: { telefono: "+56 9 98765432", email: "ana.silva@hospital.com" },  
-            horarios: { martes: "09:00 - 13:00", jueves: "09:00 - 13:00", sabado: "09:00 - 12:00" },  
-            imagen: "images/dra1.jpg",  
-        },  
-        {  
-            nombre: "Dr. Carlos Andrés Ruiz",  
-            especialidad: "Neurología",  
-            experiencia: 26,  
-            disponibilidad: "Lunes, martes y viernes",  
-            contacto: { telefono: "+56 9 13579135", email: "carlos.ruiz@hospital.com" },  
-            horarios: { lunes: "08:00 - 12:00", martes: "08:00 - 12:00", jueves: "14:00 - 18:00" },  
-            imagen: "images/doc2.jpg",  
-        },  
-        {  
-            nombre: "Dra. Juana María López",  
-            especialidad: "Dermatología",  
-            experiencia: 6,  
-            disponibilidad: "Lunes, miércoles y viernes",  
-            contacto: { telefono: "+56 9 24681357", email: "maria.lopez@hospital.com" },  
-            horarios: { lunes: "13:00 - 17:00", miercoles: "13:00 - 17:00", viernes: "08:00 - 12:00" },  
-            imagen: "images/dra2.jpg",  
-        }  
-    ];  
-// Mostrar equipo médico completo  
-function mostrarEquipo(medicos) {  
-    const teamGrid = document.getElementById('team-grid');  
-    teamGrid.innerHTML = ""; // Limpiar contenido previo  
+    let equipoMedico = [
+      {
+        nombre: "Dr. Patricio Martínez",
+        especialidad: "Cardiología",
+        experiencia: 4,
+        disponibilidad: "Martes, jueves y viernes",
+        contacto: { telefono: "+56 9 12345678", email: "juan.martinez@hospital.com" },
+        horarios: { lunes: "10:00 - 14:00", miercoles: "10:00 - 14:00", viernes: "14:00 - 18:00" },
+        imagen: "images/doc1.jpg",
+      },
+      {
+        nombre: "Dra. Matilde Silva",
+        especialidad: "Pediatría",
+        experiencia: 3,
+        disponibilidad: "Martes, jueves y sábado",
+        contacto: { telefono: "+56 9 98765432", email: "ana.silva@hospital.com" },
+        horarios: { martes: "09:00 - 13:00", jueves: "09:00 - 13:00", sabado: "09:00 - 12:00" },
+        imagen: "images/dra1.jpg",
+      },
+      {
+        nombre: "Dr. Carlos Andrés Ruiz",
+        especialidad: "Neurología",
+        experiencia: 26,
+        disponibilidad: "Lunes, martes y viernes",
+        contacto: { telefono: "+56 9 13579135", email: "carlos.ruiz@hospital.com" },
+        horarios: { lunes: "08:00 - 12:00", martes: "08:00 - 12:00", jueves: "14:00 - 18:00" },
+        imagen: "images/doc2.jpg",
+      },
+      {
+        nombre: "Dra. Juana María López",
+        especialidad: "Dermatología",
+        experiencia: 6,
+        disponibilidad: "Lunes, miércoles y viernes",
+        contacto: { telefono: "+56 9 24681357", email: "maria.lopez@hospital.com" },
+        horarios: { lunes: "13:00 - 17:00", miercoles: "13:00 - 17:00", viernes: "08:00 - 12:00" },
+        imagen: "images/dra2.jpg",
+      }
+    ];
+    // Mostrar equipo médico completo  
+    function mostrarEquipo(medicos) {
+      const teamGrid = document.getElementById('team-grid');
+      teamGrid.innerHTML = ""; // Limpiar contenido previo  
 
-    // Validar que medicos es un arreglo válido y tiene elementos  
-    if (!Array.isArray(medicos) || medicos.length === 0) {  
-        console.error("Error: 'medicos' no es un arreglo válido o está vacío.");  
-        teamGrid.innerHTML = "<p>No hay médicos disponibles para mostrar.</p>";  
-        return;  
-    }  
+      // Validar que medicos es un arreglo válido y tiene elementos  
+      if (!Array.isArray(medicos) || medicos.length === 0) {
+        console.error("Error: 'medicos' no es un arreglo válido o está vacío.");
+        teamGrid.innerHTML = "<p>No hay médicos disponibles para mostrar.</p>";
+        return;
+      }
 
-    // Recorrer y mostrar a los médicos  
-    medicos.forEach(({ nombre, especialidad, experiencia, disponibilidad, imagen }) => {  
-        const card = document.createElement('article');  
-        card.classList.add('team-item');  
+      // Recorrer y mostrar a los médicos  
+      medicos.forEach(({ nombre, especialidad, experiencia, disponibilidad, imagen }) => {
+        const card = document.createElement('article');
+        card.classList.add('team-item');
         card.innerHTML = `  
             <img src="${imagen}" alt="${nombre}" class="img-fluid mb-3">  
             <h4>${nombre}</h4>  
@@ -192,60 +199,84 @@ function mostrarEquipo(medicos) {
             <p>${experiencia} años de experiencia</p>  
             <p><strong>Disponible:</strong> ${disponibilidad}</p>  
             <button class="btn btn-primary mt-2" data-toggle="modal" data-target="#doctorModal" onclick="mostrarInfoDoctor('${nombre}')">Ver detalles</button>  
-        `;  
-        teamGrid.appendChild(card);  
-    });  
-}
+        `;
+        teamGrid.appendChild(card);
+      });
+    }
 
-  // Agregar un nuevo doctor  
-function agregarDoctorManual() {  
-    const nuevoDoctor = {  
-        nombre: "Dr. Pedro Gómez",  
-        especialidad: "Oncología",  
-        experiencia: 10,  
-        disponibilidad: "Lunes y Miércoles",  
-        contacto: { telefono: "+56 9 11223344", email: "pedro.gomez@hospital.com" },  
-        horarios: { lunes: "09:00 - 13:00", miercoles: "15:00 - 18:00" },  
-        imagen: "images/doc1.jpg",  
-    };  
+    // Agregar un nuevo doctor  
+    function agregarDoctorManual() {
+      const nuevoDoctor = {
+        nombre: "Dr. Pedro Gómez",
+        especialidad: "Oncología",
+        experiencia: 10,
+        disponibilidad: "Lunes y Miércoles",
+        contacto: { telefono: "+56 9 11223344", email: "pedro.gomez@hospital.com" },
+        horarios: { lunes: "09:00 - 13:00", miercoles: "15:00 - 18:00" },
+        imagen: "images/doc1.jpg",
+      };
 
-    // Verificar que equipoMedico es un arreglo válido  
-    if (!Array.isArray(equipoMedico)) {  
-        console.warn("Aviso: 'equipoMedico' no es un arreglo. Se inicializa como un arreglo vacío.");  
+      // Verificar que equipoMedico es un arreglo válido  
+      if (!Array.isArray(equipoMedico)) {
+        console.warn("Aviso: 'equipoMedico' no es un arreglo. Se inicializa como un arreglo vacío.");
         equipoMedico = []; // Reiniciar como arreglo vacío si no es válido  
-    }  
+      }
 
-    // Agregar el nuevo doctor al arreglo  
-    equipoMedico.push(nuevoDoctor);  
+      // Agregar el nuevo doctor al arreglo  
+      equipoMedico.push(nuevoDoctor);
 
-    // Confirmar en consola que el doctor fue agregado  
-    console.log("Doctor agregado:", nuevoDoctor);  
+      // Confirmar en consola que el doctor fue agregado  
+      console.log("Doctor agregado:", nuevoDoctor);
 
-    // Llamar a mostrarEquipo para actualizar la lista en la interfaz  
-    mostrarEquipo(equipoMedico);  
-}
+      // Llamar a mostrarEquipo para actualizar la lista en la interfaz  
+      mostrarEquipo(equipoMedico);
+    }
 
 
-// Funcion para eliminar un doctor por su nombre  
-function eliminarDoctor(nombreDoctor) {  
-    equipoMedico = equipoMedico.filter(doctor => doctor.nombre !== nombreDoctor);  
+    // Funcion para eliminar un doctor por su nombre  
+    function eliminarDoctor(nombreDoctor) {
+      equipoMedico = equipoMedico.filter(doctor => doctor.nombre !== nombreDoctor);
 
-    // Mensaje en consola para confirmar  
-    console.log(`Doctor "${nombreDoctor}" eliminado.`);  
+      // Mensaje en consola para confirmar  
+      console.log(`Doctor "${nombreDoctor}" eliminado.`);
 
-    // Actualizar la interfaz para reflejar los cambios  
-    mostrarEquipo(equipoMedico);  
-}
+      // Actualizar la interfaz para reflejar los cambios  
+      mostrarEquipo(equipoMedico);
+    }
 
-// Mostrar detalles de un doctor en el modal  
-function mostrarInfoDoctor(nombreDoctor) {  
-    const doctor = equipoMedico.find(doctor => doctor.nombre === nombreDoctor);  
-    if (doctor) {  
-        const { nombre, especialidad, experiencia, disponibilidad, contacto, horarios, imagen } = doctor;  
-        const { telefono, email } = contacto;  
+    // Función para buscar un doctor por nombre  
+    function buscarDoctor(nombreDoctor) {
+      // Buscar doctor en el arreglo equipoMedico  
+      const doctor = equipoMedico.find(doctor => doctor.nombre === nombreDoctor);
+
+      if (doctor) {
+        console.log("Doctor encontrado:", doctor);
+
+        // Mostrar detalles del doctor como un modal o en consola  
+        const modalContent = `  
+            <h3>${doctor.nombre}</h3>  
+            <h4>${doctor.especialidad}</h4>  
+            <p><strong>Experiencia:</strong> ${doctor.experiencia} años</p>  
+            <p><strong>Disponibilidad:</strong> ${doctor.disponibilidad}</p>  
+        `;
+        alert(`Doctor encontrado.\n${doctor.nombre}\nEspecialidad: ${doctor.especialidad}`);
+      } else {
+        console.warn(`Doctor "${nombreDoctor}" no encontrado.`);
+        alert(`Doctor "${nombreDoctor}" no encontrado.`);
+      }
+    }
+
+
+
+    // Mostrar detalles de un doctor en el modal  
+    function mostrarInfoDoctor(nombreDoctor) {
+      const doctor = equipoMedico.find(doctor => doctor.nombre === nombreDoctor);
+      if (doctor) {
+        const { nombre, especialidad, experiencia, disponibilidad, contacto, horarios, imagen } = doctor;
+        const { telefono, email } = contacto;
 
         // Mostrar los detalles en la consola
-        console.log("Detalles del Doctor:", doctor);  
+        console.log("Detalles del Doctor:", doctor);
 
         const modalContent = `  
             <img src="${imagen}" alt="${nombre}" class="img-fluid mb-3">  
@@ -255,71 +286,72 @@ function mostrarInfoDoctor(nombreDoctor) {
             <p><strong>Disponibilidad:</strong> ${disponibilidad}</p>  
             <p><strong>Teléfono:</strong> ${telefono}<br><strong>Email:</strong> ${email}</p>  
             <p><strong>Horarios:</strong><br>${Object.entries(horarios).map(([dia, horas]) => `${dia}: ${horas}`).join('<br>')}</p>  
-        `;  
+        `;
 
         // Agregar contenido dinámico al modal  
-        document.getElementById("doctorModalContent").innerHTML = modalContent;  
-    }  
-}
+        document.getElementById("doctorModalContent").innerHTML = modalContent;
+      }
+    }
 
     // Filtrar médicos con más de 5 años de experiencia  
-    function filtrarPorExperiencia() {  
-        const medicosFiltrados = equipoMedico.filter(({ experiencia }) => experiencia > 5);  
-        mostrarEquipo(medicosFiltrados);  
-    }  
+    function filtrarPorExperiencia() {
+      const medicosFiltrados = equipoMedico.filter(({ experiencia }) => experiencia > 5);
+      mostrarEquipo(medicosFiltrados);
+    }
 
     // Reset para mostrar todos los médicos  
-    function resetFiltrado() {  
-        mostrarEquipo(equipoMedico);  
-    }  
+    function resetFiltrado() {
+      mostrarEquipo(equipoMedico);
+    }
 
     // Inicializar página  
-    window.onload = () => {  
-        mostrarEquipo(equipoMedico);  
+    window.onload = () => {
+      mostrarEquipo(equipoMedico);
 
-        // Asignar eventos a los botones  
-        document.getElementById('filter-button').onclick = filtrarPorExperiencia;  
-        document.getElementById('reset-button').onclick = resetFiltrado;  
-    };  
+      // Asignar eventos a los botones  
+      document.getElementById('filter-button').onclick = filtrarPorExperiencia;
+      document.getElementById('reset-button').onclick = resetFiltrado;
+    };
 
 
 
-// ---FUNCIONES PARA OPERACIONES CON JSON---  
-function clonarDoctor() {  
-    const doctorOriginal = equipoMedico[0];  // Clona el primer doctor  
-    const doctorClonado = JSON.parse(JSON.stringify(doctorOriginal)); // Clonación profunda  
-    doctorClonado.nombre = "Dr. Juan Pérez Clonado"; // Modifica el clon  
-    console.log("Original:", doctorOriginal);  
-    console.log("Clonado:", doctorClonado);  
-}  
+    // ---FUNCIONES PARA OPERACIONES CON JSON---  
+    function clonarDoctor() {
+      const doctorOriginal = equipoMedico[0];  // Clona el primer doctor  
+      const doctorClonado = JSON.parse(JSON.stringify(doctorOriginal)); // Clonación profunda  
+      doctorClonado.nombre = "Dr. Juan Pérez Clonado"; // Modifica el clon  
+      console.log("Original:", doctorOriginal);
+      console.log("Clonado:", doctorClonado);
+    }
 
-function fusionarDatos() {  
-    const servicios = {  
-        servicio1: "Consulta general",  
-        servicio2: "Cirugía menor"  
-    };  
-    const doctorConServicios = { ...equipoMedico[0], ...servicios };  // Fusiona con el primer doctor  
-    console.log("Fusionado:", doctorConServicios);  
-}  
+    function fusionarDatos() {
+      const servicios = {
+        servicio1: "Consulta general",
+        servicio2: "Cirugía menor"
+      };
+      const doctorConServicios = { ...equipoMedico[0], ...servicios };  // Fusiona con el primer doctor  
+      console.log("Fusionado:", doctorConServicios);
+    }
 
-function recorrerYMostrar() {  
-    let doctoresHTML = "<ul>";  
-    equipoMedico.forEach(doctor => {  
-        doctoresHTML += `<li>${doctor.nombre} - ${doctor.especialidad}</li>`;  
-    });  
-    doctoresHTML += "</ul>";  
+    function recorrerYMostrar() {
+      let doctoresHTML = "<ul>";
+      equipoMedico.forEach(doctor => {
+        doctoresHTML += `<li>${doctor.nombre} - ${doctor.especialidad}</li>`;
+      });
+      doctoresHTML += "</ul>";
 
-    const teamGrid = document.getElementById('team-grid'); // Muestra en el contenedor  
-    teamGrid.innerHTML += doctoresHTML; // Añade al final del grid  
+      const teamGrid = document.getElementById('team-grid'); // Muestra en el contenedor  
+      teamGrid.innerHTML += doctoresHTML; // Añade al final del grid  
 
-    const equipoMedicoString = JSON.stringify(equipoMedico, null, 2);  
-    console.log(equipoMedicoString); // Muestra JSON stringificado en la consola  
+      const equipoMedicoString = JSON.stringify(equipoMedico, null, 2);
+      console.log(equipoMedicoString); // Muestra JSON stringificado en la consola  
 
-}  
+    }
     // ---FIN FUNCIONES JSON---  
-  
 
 
-  </script>  
-</body>  
+
+  </script>
+</body>
+
 </html>
