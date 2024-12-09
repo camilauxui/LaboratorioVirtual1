@@ -169,13 +169,12 @@
             imagen: "images/dra2.jpg",  
         }  
     ];  
-
-   // Mostrar equipo médico completo  
+// Mostrar equipo médico completo  
 function mostrarEquipo(medicos) {  
     const teamGrid = document.getElementById('team-grid');  
     teamGrid.innerHTML = ""; // Limpiar contenido previo  
 
-    // Validar que medicos es un arreglo válido  
+    // Validar que medicos es un arreglo válido y tiene elementos  
     if (!Array.isArray(medicos) || medicos.length === 0) {  
         console.error("Error: 'medicos' no es un arreglo válido o está vacío.");  
         teamGrid.innerHTML = "<p>No hay médicos disponibles para mostrar.</p>";  
@@ -187,11 +186,12 @@ function mostrarEquipo(medicos) {
         const card = document.createElement('article');  
         card.classList.add('team-item');  
         card.innerHTML = `  
-            <img src="${imagen}" alt="${nombre}">  
+            <img src="${imagen}" alt="${nombre}" class="img-fluid mb-3">  
             <h4>${nombre}</h4>  
             <h5>${especialidad}</h5>  
             <p>${experiencia} años de experiencia</p>  
             <p><strong>Disponible:</strong> ${disponibilidad}</p>  
+            <button class="btn btn-primary mt-2" data-toggle="modal" data-target="#doctorModal" onclick="mostrarInfoDoctor('${nombre}')">Ver detalles</button>  
         `;  
         teamGrid.appendChild(card);  
     });  
@@ -224,6 +224,20 @@ function agregarDoctorManual() {
     // Llamar a mostrarEquipo para actualizar la lista en la interfaz  
     mostrarEquipo(equipoMedico);  
 }
+
+
+// Funcion para eliminar un doctor por su nombre  
+function eliminarDoctor(nombreDoctor) {  
+    // Filtro: Dejar en equipoMedico solo los doctores que no coincidan con el nombre proporcionado  
+    equipoMedico = equipoMedico.filter(doctor => doctor.nombre !== nombreDoctor);  
+
+    // Mensaje en consola para confirmar  
+    console.log(`Doctor "${nombreDoctor}" eliminado.`);  
+
+    // Actualizar la interfaz para reflejar los cambios  
+    mostrarEquipo(equipoMedico);  
+}
+
 
 // Mostrar detalles de un doctor en el modal  
 function mostrarInfoDoctor(nombreDoctor) {  
