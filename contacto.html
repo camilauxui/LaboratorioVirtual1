@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚑Contacto</title> 
+    <!-- Enlace a la hoja de estilos -->  
+    <link rel="stylesheet" href="css/styles.css" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">  
+
+</head>
+<body>
+  <header>  
+<!-- Menú Bootstrap -->   
+  <nav class="navbar navbar-expand-lg navbar-light bg-secondary">  
+    <a class="navbar-brand" href="index.html">  
+        <img src="images/medical-center.png" alt="Logotipo del Hospital" style="height: 40px;">  
+    </a>  
+    
+    <!-- Botón siempre visible -->  
+    <div class="d-flex order-lg-2">  
+        <a class="btn btn-primary ms-2" href="#" role="button">Reservar Cita</a>  
+    </div>  
+    
+    <button class="navbar-toggler order-lg-1" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">  
+        <span class="navbar-toggler-icon"></span>  
+    </button>  
+     
+    <div class="collapse navbar-collapse order-lg-1" id="navbarNav">  
+        <ul class="navbar-nav me-auto">  
+            <li class="nav-item">  
+                <a class="nav-link text-white" href="equipo.html">Equipo médico</a>  
+            </li>  
+            <li class="nav-item">  
+                <a class="nav-link text-white" href="contacto.html">Contacto</a>  
+            </li>  
+        </ul>  
+    </div>  
+</nav>  
+
+  </header>  
+
+<!-- Sección Contacto -->  
+<section class="contact-section py-2">  
+  <div class="container">  
+    <h1 class="text-center mb-4">Contáctanos</h1>  
+    <div class="contact-form">  
+      <form id="contact-form" action="#" method="POST" class="row g-3">  
+        <div class="col-md-6">  
+          <label for="nombre" class="form-label">Nombre:</label>  
+          <input type="text" class="form-control" id="nombre" placeholder="Ingrese nombre y apellido">  
+        </div>  
+        <div class="col-md-6">  
+          <label for="email" class="form-label">Correo electrónico:</label>  
+          <input type="email" class="form-control" id="email" placeholder="nombre@dominio.com">  
+        </div>  
+        <div class="col-md-6">  
+          <label for="telefono" class="form-label">Teléfono móvil:</label>  
+          <input type="text" class="form-control" id="telefono" placeholder="Formato: +56 9 12345678">  
+        </div>  
+        <div class="col-md-6">  
+          <label for="asunto" class="form-label">Asunto:</label>  
+          <input type="text" class="form-control" id="asunto" placeholder="Motivo de su consulta">  
+        </div>  
+        <div class="col-12">  
+          <label for="mensaje" class="form-label">Mensaje:</label>  
+          <textarea id="mensaje" class="form-control" rows="3" placeholder="Ingrese su mensaje"></textarea>  
+        </div>  
+        <div class="col-12">  
+          <button type="submit" class="btn btn-primary w-100">Enviar mensaje</button>  
+        </div>  
+      </form>  
+    </div>  
+    <div id="form-result" class="mt-1"></div> <!-- Para mostrar el resultado de la validación -->  
+  </div>  
+
+
+          <!-- Mapa de ubicación -->  
+          <div class="contact-map mt-5">  
+              <h2>Nuestra ubicación</h2>  
+              <h3>Visítanos en: Calle Falsa 123, Ciudad Falsa.</h3>  
+              <iframe  
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.997087571647!2d-70.6482!3d-33.4372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDI2JzE0LjAiUyA3MMKwMzgnNTMuNSJX!5e0!3m2!1ses!2scl!4v1635959123456!5m2!1ses!2scl"  
+                  width="100%"  
+                  height="400"  
+                  style="border:0;"  
+                  allowfullscreen=""  
+                  loading="lazy"  
+                  referrerpolicy="no-referrer-when-downgrade">  
+              </iframe>  
+          </div>  
+      </div>  
+  </section>  
+
+  <!-- FOOTER -->  
+  <footer class="bg-dark text-white py-3">  
+    <div class="container">  
+      <div class="row align-items-center">  
+        <div class="col-md-2 text-center mb-4 mb-md-0">  
+          <img src="images/logo_footer.webp" alt="Logo Medical Center" class="img-fluid footer-logo">  
+        </div>  
+        <div class="col-md-3">  
+          <nav>  
+            <ul class="list-unstyled">  
+              <li><a href="equipo.html" class="text-white">Equipo Médico</a></li>  
+              <li><a href="contacto.html" class="text-white">Contacto</a></li>  
+              <li><a href="index.html" class="text-white">Servicios</a></li>  
+            </ul>  
+          </nav>  
+        </div>  
+        <div class="col-md-3">  
+          <div class="address">  
+            <p>Dirección:<br>  
+               Calle Falsa 123<br>   
+               Fono: +562 12345678</p>  
+          </div>  
+        </div>  
+        <div class="col-md-4 text-center">  
+          <div class="social">  
+            <ul class="list-inline">  
+              <li class="list-inline-item"><a href="https://facebook.com/" target="_blank" class="text-white">Facebook</a></li>  
+              <li class="list-inline-item"><a href="https://twitter.com/" target="_blank" class="text-white">X</a></li>  
+              <li class="list-inline-item"><a href="https://instagram.com/" target="_blank" class="text-white">Instagram</a></li>  
+            </ul>  
+          </div>  
+        </div>  
+      </div>  
+    </div>  
+  </footer>  
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>  
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>  
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>  
+  
+  <script>  
+    document.addEventListener('DOMContentLoaded', () => {  
+      const contactForm = document.getElementById('contact-form');  
+      const resultDiv = document.getElementById('form-result');  
+  
+      contactForm.addEventListener('submit', (e) => {  
+        e.preventDefault(); // Prevenir el envío del formulario
+  
+        // Recoger valores de los campos  
+        const nombre = document.getElementById('nombre').value.trim();  
+        const email = document.getElementById('email').value.trim();  
+        const telefono = document.getElementById('telefono').value.trim();  
+        const asunto = document.getElementById('asunto').value.trim();  
+        const mensaje = document.getElementById('mensaje').value.trim();  
+  
+        // Limpiar cualquier mensaje previo  
+        resultDiv.innerHTML = '';  
+  
+        try {  
+          debugger; // Inicia depuración 
+  
+          // Validación de campos  
+          if (!nombre) throw new Error('Debes ingresar un nombre y apellido');  
+          if (!email || !/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/.test(email)) {  
+            throw new Error('Debes ingresar un correo electrónico válido. Ejemplo: ana@dominio.com');  
+          }  
+          if (!telefono || !/^\+56 9 \d{8}$/.test(telefono))  {  
+            throw new Error('El teléfono debe tener el formato "+56 9 12345678"');  
+          }  
+          if (!asunto) throw new Error('El campo "Asunto" no puede estar vacío.');  
+          if (!mensaje) throw new Error('El campo "Mensaje" no puede estar vacío.');  
+  
+          // En caso de que todo sea válido  
+          resultDiv.innerHTML = `<p class="text-success">¡Mensaje enviado correctamente! Un especialiste te responderá a la brevedad.</p>`;  
+  
+        } catch (error) {  
+          // Manejo de errores  
+          resultDiv.innerHTML = `<p class="text-danger">Error: ${error.message}</p>`;  
+          console.error(error);  
+        }  
+      });  
+    });  
+  </script>  
+  </body>  
+  </html>  
