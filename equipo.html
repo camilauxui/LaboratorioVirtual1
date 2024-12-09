@@ -52,7 +52,7 @@
     <!-- Botones para agregar o eliminar dres -->  
     <div class="text-center my-4">  
       <button onclick="agregarDoctorManual()" type="button" class="btn btn-info">Agregar Doctor</button>  
-      <button onclick="eliminarDoctor('Dra. Matilde Silva')" type="button" class="btn btn-info">Eliminar Doctor</button>  
+      <button onclick="eliminarDoctor('Dr. Pedro Gómez')" type="button" class="btn btn-info">Eliminar Doctor</button>  
       <button onclick="buscarDoctor('Dr. Carlos Andrés Ruiz')" type="button" class="btn btn-info">Buscar Doctor</button>  
     </div> 
 
@@ -131,12 +131,12 @@
   <!-- Script para manejar el equipo médico -->  
   <script>  
     // JSON del equipo médico  
-    const equipoMedico = [  
+    let equipoMedico = [  
         {  
             nombre: "Dr. Patricio Martínez",  
             especialidad: "Cardiología",  
             experiencia: 4,  
-            disponibilidad: "Lunes, martes,jueves y viernes",  
+            disponibilidad: "Martes, jueves y viernes",  
             contacto: { telefono: "+56 9 12345678", email: "juan.martinez@hospital.com" },  
             horarios: { lunes: "10:00 - 14:00", miercoles: "10:00 - 14:00", viernes: "14:00 - 18:00" },  
             imagen: "images/doc1.jpg",  
@@ -228,7 +228,6 @@ function agregarDoctorManual() {
 
 // Funcion para eliminar un doctor por su nombre  
 function eliminarDoctor(nombreDoctor) {  
-    // Filtro: Dejar en equipoMedico solo los doctores que no coincidan con el nombre proporcionado  
     equipoMedico = equipoMedico.filter(doctor => doctor.nombre !== nombreDoctor);  
 
     // Mensaje en consola para confirmar  
@@ -237,7 +236,6 @@ function eliminarDoctor(nombreDoctor) {
     // Actualizar la interfaz para reflejar los cambios  
     mostrarEquipo(equipoMedico);  
 }
-
 
 // Mostrar detalles de un doctor en el modal  
 function mostrarInfoDoctor(nombreDoctor) {  
